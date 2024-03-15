@@ -17,7 +17,7 @@ public class LaunchBrowser {
 		
 		driver.close();
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }
