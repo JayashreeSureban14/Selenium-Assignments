@@ -15,8 +15,8 @@ public class Scenario1 {
 		Thread.sleep(2000);
 		driver.findElement(By.name("btnK")).click();
 		
-		Thread.sleep(2000);
-		driver.close();
+		//Thread.sleep(2000);
+		//driver.close();
 
 	}
 
