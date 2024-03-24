@@ -22,17 +22,21 @@ public class GroTechMindsLogin {
 		
 		driver.findElement(By.id("Female")).click();
 		
-		/*Thread.sleep(2000);
-		WebElement skills=driver.findElement(By.xpath("(//select)[1]"));
+		Thread.sleep(2000);
+		WebElement skills=driver.findElement(By.xpath("(//select)[6]"));
 		Select s1=new Select(skills);
-		//s1.selectByValue("Technical Skills");
-		s1.selectByIndex(1);*/
+		s1.selectByValue("select1");
+		//s1.selectByIndex(1);
+		
+		WebElement tech=driver.findElement(By.xpath("(//select)[7]"));
+		Select s2=new Select(tech);
+		s2.selectByVisibleText("Core Java");
 		
 		WebElement country=driver.findElement(By.id("Country"));
-		Select s2=new Select(country);
-		s2.selectByValue("India");
+		Select s3=new Select(country);
+		s3.selectByValue("India");
 		
-		/*WebElement present=driver.findElement(By.id("Present-Address"));
+		WebElement present=driver.findElement(By.id("Present-Address"));
 		present.sendKeys("JP Nagar Bangalore");
 		present.sendKeys(Keys.CONTROL+"a");
 		present.sendKeys(Keys.CONTROL+"c");
@@ -43,8 +47,8 @@ public class GroTechMindsLogin {
 		driver.findElement(By.id("Pincode")).sendKeys("591102");
 		
 		WebElement rel=driver.findElement(By.name("Relegion"));
-		Select s3=new Select(rel);
-		s3.selectByIndex(2);
+		Select s4=new Select(rel);
+		s4.selectByIndex(2);
 		
 		WebElement upload=driver.findElement(By.id("file"));
 		upload.sendKeys("C:\\Users\\DELL\\eclipse-workspace\\SeleniumProject\\src\\launchSelenium\\DropdownClass.java");
@@ -52,7 +56,6 @@ public class GroTechMindsLogin {
 		driver.findElement(By.id("relocate")).click();
 		
 		driver.findElement(By.xpath("//button[@name='Submit']")).click();
-		*/
+		
 	}
-
 }

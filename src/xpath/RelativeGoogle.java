@@ -1,10 +1,10 @@
-package launchSelenium;
+package xpath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SelectedorNot {
+public class RelativeGoogle {
 
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -12,15 +12,13 @@ public class SelectedorNot {
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");
 		
-		WebElement search=driver.findElement(By.xpath("(//textarea)[1]"));
+		WebElement search=driver.findElement(By.xpath("(//textarea)[1]")); //relative xpath
+		search.sendKeys("India");
 		
-		if(search.isDisplayed()==true && search.isEnabled()==true)
-		{
-			search.sendKeys("India");
-		}
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@name='btnK']")).click();
-
+		
+		WebElement btn=driver.findElement(By.xpath("(//input)[1]")); //relative xpath
+		btn.click();
 	}
 
 }
