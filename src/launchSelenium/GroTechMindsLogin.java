@@ -40,6 +40,7 @@ public class GroTechMindsLogin {
 		present.sendKeys("JP Nagar Bangalore");
 		present.sendKeys(Keys.CONTROL+"a");
 		present.sendKeys(Keys.CONTROL+"c");
+		driver.findElement(By.name("relocate")).click();
 		
 		WebElement permanent=driver.findElement(By.name("Permanent-Address"));
 		permanent.sendKeys(Keys.CONTROL+"v");
@@ -48,12 +49,13 @@ public class GroTechMindsLogin {
 		
 		WebElement rel=driver.findElement(By.name("Relegion"));
 		Select s4=new Select(rel);
-		s4.selectByIndex(2);
+		s4.selectByIndex(1);
 		
 		WebElement upload=driver.findElement(By.id("file"));
-		upload.sendKeys("C:\\Users\\DELL\\eclipse-workspace\\SeleniumProject\\src\\launchSelenium\\DropdownClass.java");
+		upload.sendKeys("C:\\Users\\DELL\\eclipse-workspace\\SeleniumProject\\src\\navigators");
+		Thread.sleep(2000);
+		//driver.findElement(By.xpath("//input[@name='relocate']")).click();
 		
-		driver.findElement(By.id("relocate")).click();
 		
 		driver.findElement(By.xpath("//button[@name='Submit']")).click();
 		

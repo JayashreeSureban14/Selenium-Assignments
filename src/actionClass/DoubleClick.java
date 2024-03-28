@@ -16,7 +16,7 @@ public class DoubleClick {
 		
 		WebElement course=driver.findElement(By.linkText("Courses"));
 		
-		Actions a1=new Actions(driver);
+		Actions a1=new Actions(driver); //actions class
 		a1.doubleClick(course).perform();
 	}
 
