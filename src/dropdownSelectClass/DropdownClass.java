@@ -1,5 +1,7 @@
 package dropdownSelectClass;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -29,6 +31,12 @@ public class DropdownClass {
 		
 		WebElement first=driver.findElement(By.xpath("(//div[@class='a-section aok-relative s-image-fixed-height'])[1]"));
 		first.click();
+		
+		//count the number of options in a dropdown
+		List<WebElement> ls=s1.getOptions();
+		int count=ls.size();
+		System.out.println(count);
+		
 		
 	}
 

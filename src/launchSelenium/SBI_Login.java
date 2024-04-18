@@ -1,14 +1,19 @@
 package launchSelenium;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
 
 public class SBI_Login {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		
 		ChromeDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
@@ -33,6 +38,11 @@ public class SBI_Login {
 		
 		String title=driver.getTitle();
 		System.out.println(title);
+		
+		TakesScreenshot tss=driver;
+		File source=tss.getScreenshotAs(OutputType.FILE);
+		File target=new File("C:\\Users\\DELL\\eclipse-workspace\\SeleniumProject\\Screenshots\\sbi.png");
+		FileHandler.copy(source, target);
 	}
 
 }
