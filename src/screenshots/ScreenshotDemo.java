@@ -13,7 +13,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class ScreenshotDemo {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException  {
 		
 		ChromeDriver driver=new ChromeDriver();
 		driver.get("https://grotechminds.com/dropdown/");
@@ -51,6 +51,7 @@ public class ScreenshotDemo {
 		WebElement Choice11=driver.findElement(By.xpath("(//select[@id='Choice10'])[1]"));
 		Select dd10=new Select(Choice11);
 		dd10.selectByIndex(5);
+		
 		TakesScreenshot tss= driver;
 		File source=tss.getScreenshotAs(OutputType.FILE);
 		File destination=new File("C:\\Users\\DELL\\eclipse-workspace\\SeleniumProject\\Screenshots\\Pic.png");
